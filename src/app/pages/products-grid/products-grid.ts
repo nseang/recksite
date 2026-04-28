@@ -1,6 +1,7 @@
-import { Component, signal, input, computed } from '@angular/core';
+import { Component, signal, input, computed, OnInit } from '@angular/core';
 import { Product } from '../../models/product';
 import { ProductCard } from '../../components/product-card/product-card';
+import { ProductDataService } from '../../services/product-data.service';
 
 @Component({
   selector: 'app-products-grid',
@@ -8,22 +9,16 @@ import { ProductCard } from '../../components/product-card/product-card';
   templateUrl: './products-grid.html',
   styleUrl: './products-grid.scss',
 })
-export default class ProductsGrid {
+export default class ProductsGrid implements OnInit {
   category = input<string>('all');
 
-  products = signal<Product[]>([
-    {
-      id: "p001",
-      name: "BvdInflu3nc3 T-Shirt",
-      description: "Drop shoulder oversize Tees",
-      price: 44.99,
-      imageUrl: "img/badInfluence2.png",
-      rating: 4.5,
-      reviewCount: 0,
-      inStock: false,
-      category: "Clothes",
-    },
-  ]);
+  products = signal<Product[]>([]);
+
+  constructor(private productDataService: ProductDataService) {}
+
+  ngOnInit(): void {
+    this.products = signal<Product[]>(this.productDataService.getAllProducts())
+  }
 
   filteredProducts = computed(() => {
     if(this.category().toLowerCase() === 'all') return this.products();

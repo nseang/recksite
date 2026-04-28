@@ -1,6 +1,6 @@
-<div class="bg-white cursor-pointer rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+<div class="bg-white cursor-pointer rounded-xl shadow-lg overflow-hidden flex flex-col h-full transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-xl" [routerLink]="['/product', product().id]">
 	<!-- TODO get different image for broken image links, current one is copywritten -->
-	<img [src]="product().imageUrl" class="w-full h-[300px] object-scale-down rounded-t-xl"/>
+	<img [src]="product().imageUrl" class="w-full h-[300px] object-scale-down rounded-t-xl" [style.view-transition-name]="'product-image-' + product().id" />
 
 	<div class="p-5 flex flex-col flex-1">
 		<h3 class="text-lg text-gray-900 mb-2 leading-tight">

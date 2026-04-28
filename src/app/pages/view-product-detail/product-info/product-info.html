@@ -1,0 +1,27 @@
+<!-- <div class="text-xs rounded-x1 bg-gray-100 px-2 py-1 w-fit mb-2">
+	{{ product().category | titlecase }}
+
+</div> -->
+
+<h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">{{ product().name }}</h1>
+<!-- <h1 class="text-2x1 font-extrabold mb-3"> {{ product().name }}</h1> -->
+ <h2 class="mb-4 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-4xl"> ${{ product().price }}</h2>
+<!-- <h2 class="text-lg text-4x1 font-extrabold mb-4"> ${{ product().price }}</h2> -->
+
+<!-- @if (product().inStock) {
+	<div class="flex items-center gap-2 border border-gray-200 rounded-lg px-3 py-3 bg-white w-full">
+		<mat-icon class="small">check_circle</mat-icon>
+		<span class="text-xs text-gray-800"> In stock and ready to ship</span>
+	</div>
+} @else {
+	<div class="flex items-center gap-2 border border-red-700 rounded-lg px-3 py-3 bg-white w-full">
+		<mat-icon class="small">warning</mat-icon>
+		<span class="text-xs"> This item is currently out of stock</span>
+	</div>
+} -->
+
+<p class="font-semibold mb-2 pt-5">Description</p>
+<p class="text-gray-900 border-b border-black-200 pb-4">{{ product().description }}</p>
+
+<p class="mb-2 pt-5 ">Contact: Bvdinflu3nc3@gmail.com to place a pre-order</p>
+<p>Check out <a href="https://www.instagram.com/bvdinflu3nc3?utm_source=qr" class="font-medium text-fg-brand hover:underline text-blue-800">BvdInflu3nc3</a> for the latest updates</p>
