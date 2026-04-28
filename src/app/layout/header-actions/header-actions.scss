@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+
+.cart {
+	@include mat.icon-button-overrides((
+		icon-color: white
+	))
+}
