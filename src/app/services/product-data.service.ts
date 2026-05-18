@@ -29,18 +29,19 @@ export class ProductDataService {
       reviewCount: 0,
       inStock: false,
       category: "Clothes",
-    },
-    {
-      id: "p002",
-      name: "BvdInflu3nc3 T-Shirt Flex",
-      description: "Drop shoulder oversize Tees. Sizes come in s-xl",
-      price: 44.99,
-      imageUrl: "img/badInfluence2.png",
-      rating: 4.5,
-      reviewCount: 0,
-      inStock: true,
-      category: "Clothes",
-    },
+    }
+    // },
+    // {
+    //   id: "p002",
+    //   name: "BvdInflu3nc3 T-Shirt Flex",
+    //   description: "Drop shoulder oversize Tees. Sizes come in s-xl",
+    //   price: 44.99,
+    //   imageUrl: "img/badInfluence2.png",
+    //   rating: 4.5,
+    //   reviewCount: 0,
+    //   inStock: true,
+    //   category: "Clothes",
+    // },
   ];
 
   getProductData(productId: string): Product {
