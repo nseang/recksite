@@ -7,7 +7,7 @@
     "build": "ng build --output-path docs --base-href /reksite/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-page": "ng deploy --base-href=/recksite/"
+    "build-page": "ng deploy --cname=www.bvdinflu3nc3.com"
   },
   "private": true,
   "packageManager": "npm@11.6.1",
